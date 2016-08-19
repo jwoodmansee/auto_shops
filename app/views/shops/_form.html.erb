@@ -1,0 +1,21 @@
+
+
+<%= form_for @shop do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+<br />
+  <%= f.label :address %>
+  <%= f.text_field :address, required: true %>
+<br />
+  <%= f.label :hour %>
+  <%= f.text_field :hour, required: true %>
+<br />
+  <%= f.label :base_rate %>
+  <%= f.text_field :base_rate, required: true %>
+<br />
+  <%= f.label :descripton %>
+  <%= f.text_area :descripton, required: true %>
+<br />
+  <%= f.submit %>
+
+<% end %>

@@ -1,0 +1,12 @@
+<h1>Shop</h1>
+
+<h3> <%= @shop.name %> </h3>
+<p>Address: <%= @shop.address %> </p>
+<p>Hours of Operation: <%= @shop.hour %> </p>
+<p>Base Rates(Some Restriction May Apply): <%= @shop.base_rate %></p>
+<p>Description: <%= @shop.descripton %> </p>
+
+<br />
+<%= link_to 'Edit Shop', edit_shop_path(@shop) %>
+<%= link_to 'Delete', shop_path(@shop), method: :delete, data: {confirm: "Are You Sure you would like to remove #{@shop.name}?"} %>
+<%= link_to "#{@shop.name.pluralize} Cars Lot", shop_cars_path(@shop) %>

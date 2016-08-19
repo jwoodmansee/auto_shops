@@ -1,0 +1,19 @@
+<%= form_for [@shop, @car] do |f| %>
+<br />
+  <%= f.label :make %>
+  <%= f.text_field :make, required: true %>
+<br />  
+  <%= f.label :model %>
+  <%= f.text_field :model, required: true %>
+<br />
+  <%= f.label :year %>
+  <%= f.select :year, (1920..2016).to_a %>
+<br />  
+  <%= f.label :milage %>
+  <%= f.text_field :milage %>
+<br />
+  <%= f.label :issues %>
+  <%= f.text_area :issues, required: true %>
+<br />
+  <%= f.submit %>
+<%= end %>

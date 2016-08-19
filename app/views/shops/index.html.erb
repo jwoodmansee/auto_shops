@@ -1,0 +1,14 @@
+<h1>All Shops</h1>
+
+<% if @shops.any? %>
+  <ul>
+    <% @shops.each do |shop| %>
+      <li>
+        <%= link_to shop.name, shop_path(shop) %>
+      </li>
+    <% end %>
+
+  </ul>
+<% else %>
+  <p>There are currently no shops in the database. Please come back later.</p>
+<% end %>
